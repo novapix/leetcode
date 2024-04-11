@@ -21,18 +21,18 @@
 - Dart
     ```dart
     class Solution {
-    List<int> twoSum(List<int> nums, int target) {
-        for (int i = 0; i < nums.length; i++) {
-        for (int j = i + 1; j < nums.length; j++) {
-            if (i != j && nums[i] + nums[j] == target) return [i, j];
+        List<int> twoSum(List<int> nums, int target) {
+            for (int i = 0; i < nums.length; i++) {
+                for (int j = i + 1; j < nums.length; j++) {
+                    if (i != j && nums[i] + nums[j] == target) return [i, j];
+                }
+            }
+            return [];
         }
-        }
-        return [];
-    }
     }
 
     void main() {
-    final Solution soln = new Solution();
-    print(soln.twoSum([2, 7, 11, 15], 26));
+        final Solution soln = new Solution();
+        print(soln.twoSum([2, 7, 11, 15], 26));
     }
     ```

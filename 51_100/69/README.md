@@ -2,10 +2,9 @@
 
 ## Python
 
-- Time Complexity of $$\sqrt{n}$$
+- `Time Complexity of` √n
 
     ```py
-    # Time Complexity of
     class Solution:
         def mySqrt(self, x: int) -> int:
             # Square Root of 0 and 1 are themselves
