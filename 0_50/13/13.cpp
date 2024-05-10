@@ -14,7 +14,6 @@ public:
             {'C', 100},
             {'D', 500},
             {'M', 1000}
-
         };
         int total = 0;
         int len = static_cast<int>(s.length());
