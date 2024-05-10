@@ -1,12 +1,12 @@
 class Solution {
   bool isPalindrome(int x) {
+    if (x < 0) return false;
     int temp = x;
     int rev = 0;
-    while (temp > 0) {
-      final digit = temp % 10;
-      rev = rev * 10 + digit;
-      temp = temp ~/ 10;
+    while (x > 0) {
+      rev = rev * 10 + x % 10;
+      x ~/= 10;
     }
-    return x == rev;
+    return temp == rev;
   }
 }

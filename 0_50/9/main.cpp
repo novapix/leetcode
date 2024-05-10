@@ -3,13 +3,12 @@ public:
     bool isPalindrome(int x) {
         if (x < 0)
             return false;
-        unsigned int temp = x;
-        unsigned int rev = 0;
-        while (temp > 0) {
-            int digit = temp % 10;
-            rev = rev * 10 + digit;
-            temp = temp / 10;
+        long temp = x;
+        long rev = 0;
+        while (x > 0) {
+            rev = rev * 10 + x % 10;
+            x /= 10;
         }
-        return x == rev;
+        return temp == rev;
     }
 };

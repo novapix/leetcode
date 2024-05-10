@@ -1,17 +1,14 @@
 class Solution:
-    def climbStairs(self, n):
+    def climbStairs(self, n: int) -> int:
         if n <= 2:
             return n
 
-        fn = [0] * (n + 1)
-        fn[0] = 1
-        fn[1] = 2
+        a, b = 1, 2
+        for _ in range(3, n + 1):
+            a, b = b, a + b
 
-        for i in range(3, n + 1):
-            fn[i] = fn[i - 1] + fn[i - 2]
-
-        return fn[n]
+        return b
 
 
 s = Solution()
-print(s.climbStairs(45))
+print(s.climbStairs(4))
