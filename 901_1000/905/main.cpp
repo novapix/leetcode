@@ -5,17 +5,17 @@ using namespace std;
 class Solution {
 public:
     vector<int> sortArrayByParity(vector<int>& nums) {
-        vector<int> listEven, listOdd;
+        int len = nums.size();
+        vector<int> arr(len);
 
-        for (const int& number : nums) {
-            if (number % 2 == 0) listEven.push_back(number);
-            else listOdd.push_back(number);
+        int evenCounter = 0, oddCounter = len - 1;
+        for (int i = 0;i < len;i++) {
+            if (nums[i] % 2 == 0) {
+                arr[evenCounter++] = nums[i];
+            } else {
+                arr[oddCounter--] = nums[i];
+            }
         }
-        for(const int& number : listOdd){
-            listEven.push_back(number);
-        }
-
-
-        return listEven;
+        return arr;
     }
 };
